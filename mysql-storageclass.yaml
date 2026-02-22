@@ -1,0 +1,11 @@
+# StorageClass for MySQL persistent volumes
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: mysql-storage
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: gp2
+reclaimPolicy: Retain
+allowVolumeExpansion: true
+volumeBindingMode: WaitForFirstConsumer
