@@ -13,17 +13,7 @@ This guide covers deploying a MySQL cluster with primary-replica replication usi
 
 ## Architecture
 
-```
-┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│   mysql-0   │ ──── │   mysql-1   │ ──── │   mysql-2   │
-│   Primary   │      │   Replica   │      │   Replica   │
-└─────────────┘      └─────────────┘      └─────────────┘
-      │                    │                    │
-      ▼                    ▼                    ▼
-┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│    PVC-0    │      │    PVC-1    │      │    PVC-2    │
-└─────────────┘      └─────────────┘      └─────────────┘
-```
+![image](img/architecture-k8s-statefulset-mysql.png)
 
 ## Components
 
